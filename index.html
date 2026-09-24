@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>KULKY 90</title>
+<link rel="stylesheet" href="css/style.css">
+<style>.sheet{display:none!important}.sheet.open{display:flex!important}</style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">KULKY <span>90</span></div>
+      <div class="stats">
+        <div>Lv <b id="stat-lv">1</b></div>
+        <div id="stat-coins">40 Kc</div>
+        <div id="stat-owned">4</div>
+      </div>
+    </header>
+    <div class="stage-wrap">
+      <div class="hud">
+        <div class="pill" id="stat-title">Skolni dvorek</div>
+        <div class="pill" id="stat-xp">0 XP</div>
+      </div>
+      <canvas id="arena" width="390" height="640"></canvas>
+    </div>
+    <nav class="bottom">
+      <button type="button" id="btn-col">Sbirka</button>
+      <button type="button" id="btn-place">Misto</button>
+      <button type="button" id="btn-play" class="primary">Dalsi kolo</button>
+      <button type="button" id="btn-packs">Packy</button>
+    </nav>
+  </div>
+  <div class="sheet" id="sheet-col" hidden><div class="panel"><h2>SBIRKA</h2><p class="muted">Vyber kulicku.</p><div class="grid" id="collection-grid"></div><div class="bottom" style="padding:16px 0 0"><button type="button" data-close>Zavrit</button></div></div></div>
+  <div class="sheet" id="sheet-place" hidden><div class="panel"><h2>KDE SE HRAJE</h2><p class="muted">Ty proti botovi.</p><div id="place-list"></div><div class="bottom" style="padding:16px 0 0"><button type="button" data-close>Zavrit</button></div></div></div>
+  <div class="sheet" id="sheet-packs" hidden><div class="panel"><h2>PACKY</h2><p class="muted">Edice podle urovne.</p><div id="packs-list"></div><div class="bottom" style="padding:16px 0 0"><button type="button" data-close>Zavrit</button></div></div></div>
+  <div class="sheet" id="sheet-reveal" hidden><div class="panel"><h2 id="reveal-title">Pack</h2><p class="muted">Nove kulicky.</p><div class="reveal" id="reveal-row"></div><div class="bottom" style="padding:16px 0 0"><button type="button" data-close class="primary">Do sbirky</button></div></div></div>
+  <div class="toast" id="toast"></div>
+  <script src="js/data.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
