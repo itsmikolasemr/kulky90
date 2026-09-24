@@ -1,0 +1,28 @@
+:root { --ink:#1a1714; --chalk:#f4efe4; --gold:#c9a24a; }
+* { box-sizing:border-box; margin:0; padding:0; }
+html,body { height:100%; height:100dvh; height:100svh; }
+body { font-family:-apple-system,sans-serif; background:#2b2824; color:#f4efe4; overflow:hidden; }
+.app { display:flex; flex-direction:column; height:100%; height:100dvh; height:100svh; }
+.topbar { flex-shrink:0; display:flex; align-items:center; justify-content:space-between; padding:10px 14px 8px; padding-top:max(10px,env(safe-area-inset-top)); background:linear-gradient(#3e3933,#2f2c28); }
+.brand { letter-spacing:.18em; font-size:13px; font-weight:700; }
+.brand span { color:#c9a24a; }
+.stats { display:flex; gap:14px; font-size:12px; color:#d7cbb4; }
+.stats b { color:#fff; }
+.stage-wrap { position:relative; flex:1 1 auto; min-height:280px; background:#2a261f; }
+canvas#arena { position:absolute; inset:0; width:100%; height:100%; display:block; touch-action:none; }
+.hud { position:absolute; left:12px; right:12px; top:10px; display:flex; justify-content:space-between; pointer-events:none; font-size:12px; z-index:2; }
+.hud .pill { background:#0006; border:1px solid #fff2; padding:6px 10px; border-radius:999px; }
+.bottom { flex-shrink:0; display:flex; gap:8px; padding:10px 12px max(18px,env(safe-area-inset-bottom)); background:#241f1b; z-index:3; }
+.bottom button { flex:1; height:44px; border:0; border-radius:8px; font-weight:650; background:#4a433b; color:#f4efe4; font-size:11px; }
+.bottom button.primary { background:#c9a24a; color:#1a1408; }
+.sheet { position:fixed; inset:0; background:#0d0c0acc; display:none; align-items:flex-end; z-index:20; }
+.sheet.open { display:flex; }
+.sheet .panel { width:100%; max-height:86%; overflow:auto; background:#2c2823; border-radius:18px 18px 0 0; padding:16px 16px 28px; }
+.muted { color:#b6ab98; font-size:12px; margin-bottom:14px; }
+.grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.card { background:#3a342d; border-radius:10px; padding:10px 8px; text-align:center; }
+.card.selected { outline:2px solid #c9a24a; }
+.card canvas { width:72px; height:72px; }
+.pack { display:flex; justify-content:space-between; align-items:center; background:#3a342d; border-radius:10px; padding:12px; margin-bottom:8px; }
+.pack button { height:36px; padding:0 12px; border:0; border-radius:7px; background:#c9a24a; color:#1a1408; font-weight:700; }
+.toast { position:fixed; left:50%; bottom:86px; transform:translateX(-50%); background:#111c; color:#fff; padding:8px 12px; border-radius:8px; display:none; z-index:30; }
